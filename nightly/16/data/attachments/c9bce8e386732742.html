@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset = UTF-8">
+    <script src="https://yastatic.net/jquery/2.2.3/jquery.min.js" crossorigin="anonymous"></script>
+
+    <link href="https://yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://yastatic.net/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <link type="text/css" href="https://yandex.st/highlightjs/8.0/styles/github.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/8.0/languages/bash.min.js"></script>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/8.0/languages/json.min.js"></script>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/8.0/languages/xml.min.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <pre><code>POST: http://auth.rococo.dc:9000/oauth2/token</code></pre>
+</div>
+
+    <h4>Body</h4>
+    <div>
+        <pre><code>client_id=client&redirect_uri=http%3A%2F%2Ffrontend.rococo.dc%2Fauthorized&grant_type=authorization_code&code=1JeCeDikEIpXGzQNwmEb7P6v9_svZLMLu-EmQeDYZO2JMfqIgNSVfopTp-Ij73f9fY0rl0fk4ZXP1UnqgoQR4HQtVONICiZ73LrzKF-jP4EVs7KIkc4E3oe-baE6Mbyu&code_verifier=XVc2jGDuoKQPhOzrwBmk2k1K6jYI74gehCeWwe8BKI8</code></pre>
+    </div>
+
+
+
+
+    <h4>Curl</h4>
+    <div>
+        <pre><code>curl -v -X POST 'http://auth.rococo.dc:9000/oauth2/token' -d 'client_id=client&redirect_uri=http%3A%2F%2Ffrontend.rococo.dc%2Fauthorized&grant_type=authorization_code&code=1JeCeDikEIpXGzQNwmEb7P6v9_svZLMLu-EmQeDYZO2JMfqIgNSVfopTp-Ij73f9fY0rl0fk4ZXP1UnqgoQR4HQtVONICiZ73LrzKF-jP4EVs7KIkc4E3oe-baE6Mbyu&code_verifier=XVc2jGDuoKQPhOzrwBmk2k1K6jYI74gehCeWwe8BKI8'</code></pre>
+    </div>
+</body>
+</html>

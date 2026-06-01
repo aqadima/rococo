@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset = UTF-8">
+    <script src="https://yastatic.net/jquery/2.2.3/jquery.min.js" crossorigin="anonymous"></script>
+
+    <link href="https://yastatic.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://yastatic.net/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <link type="text/css" href="https://yandex.st/highlightjs/8.0/styles/github.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://yandex.st/highlightjs/8.0/languages/sql.min.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h5>SQL Query</h5>
+<div>
+    <pre><code>SELECT
+  m.id as metadata_id,
+  m.entity_type as entity_type,
+  m.entity_id as entity_id,
+  m.format as format,
+  m.content_hash as hash,
+  c.id as content_id,
+  c.data as data,
+  c.thumbnail_data as thumbnail_data,
+  m.created_date as created_date
+FROM
+  rococo.image_metadata m
+  LEFT JOIN rococo.image_content c ON m.content_id = c.id
+WHERE
+  m.entity_type = 'PAINTING'
+  AND m.entity_id IN (
+    'e177258a-5d83-11f1-a4ff-9e67ff3115f9',
+    'e17c6a86-5d83-11f1-a43f-9e67ff3115f9',
+    'e1b44be0-5d83-11f1-a4ff-9e67ff3115f9',
+    'e1f4fece-5d83-11f1-a4ff-9e67ff3115f9',
+    'e19089e4-5d83-11f1-a4ff-9e67ff3115f9',
+    'e2f147e2-5d83-11f1-a4ff-9e67ff3115f9',
+    'e3033650-5d83-11f1-a4ff-9e67ff3115f9',
+    'e32ea7b8-5d83-11f1-a43f-9e67ff3115f9',
+    'e32f1748-5d83-11f1-a4ff-9e67ff3115f9',
+    '91f2277a-5106-4f1d-9f78-5a0b2bd90e3b',
+    'e3591bb0-5d83-11f1-a4ff-9e67ff3115f9',
+    'e37a5082-5d83-11f1-a4ff-9e67ff3115f9',
+    'e3944186-5d83-11f1-a4ff-9e67ff3115f9',
+    'e3d01558-5d83-11f1-a4ff-9e67ff3115f9',
+    'e3da6d8c-5d83-11f1-a43f-9e67ff3115f9',
+    'e61eb8e6-5d83-11f1-a4ff-9e67ff3115f9',
+    'e643b0f6-5d83-11f1-a4ff-9e67ff3115f9',
+    'e64726aa-5d83-11f1-ada1-9e67ff3115f9',
+    'e641d61e-5d83-11f1-a43f-9e67ff3115f9',
+    'e66c3a4e-5d83-11f1-a4ff-9e67ff3115f9'
+  )</code></pre>
+</div>
+
+</body>
+</html>
